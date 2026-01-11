@@ -1,9 +1,14 @@
-const btn = document.getElementById('btnCorazon');
-const extra = document.getElementById('extra');
-const titulo = document.getElementById('titulo');
+// Espera a que cargue el contenido
+document.addEventListener('DOMContentLoaded', () => {
+    const btn = document.getElementById('btnCorazon');
+    const extra = document.getElementById('extra');
 
-btn.addEventListener('click', () => {
-    extra.classList.remove('hidden');
-    titulo.innerText = "Te extraño";
-    btn.style.display = 'none';
+    if (btn) {
+        btn.addEventListener('click', () => {
+            // Muestra el mensaje oculto
+            extra.classList.remove('hidden');
+            // Oculta el botón suavemente
+            btn.style.display = 'none';
+        });
+    }
 });
